@@ -1,0 +1,26 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="blogs content">
+      <h2>All Images</h2>
+      <div class="inner">
+        
+        <% if (media.length > 0) { %>
+        <% media.forEach(media_urls => { %> 
+            <a href="/<%= media_urls._id %> " class="single" target="_blank">
+                <source srcset="<%= media_urls.media_url %>" type="image/jpeg">
+                <p class="aws_url"><%= media_urls.aws_url %> </p>
+            </a>
+            <% }) %> 
+     <% } else { %>
+        <p>There are no blogs to display...</p>
+        <% } %> 
+      
+      </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
