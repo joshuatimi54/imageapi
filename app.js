@@ -10,7 +10,7 @@ const app = express();
 mongoose.set('strictQuery', false);
 
 const dbURI = 'mongodb+srv://one-new:tvAte0ofJTw5uCuB@cluster0.gx4k5pc.mongodb.net/test?retryWrites=true&w=majority'
-//'mongodb+srv://Joshua:Ps7d1dlN0502y4sL@cluster0.r96fjuf.mongodb.net/Blog-post?retryWrites=true&w=majority'
+
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
