@@ -25,7 +25,7 @@ app.use(morgan('dev'));
 
 // image routes
 app.get('/', (req,res) => {
-    media.find().limit(150)
+    media.find().limit(1000)
     .then((result) => {
        //res.send(result);
        res.render('index', {title: 'Home', media: result});
